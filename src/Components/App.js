@@ -22,7 +22,6 @@ export default class App extends Component {
   };
   statusChange = (id, date) => {
     const list = [...this.state.todos];
-    console.log(date);
     list[id].done = true;
     list[id].dateDone = date;
     this.setState({
