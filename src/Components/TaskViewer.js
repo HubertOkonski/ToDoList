@@ -4,7 +4,7 @@ function TaskViewer(props) {
   return (
     <div>
       {props.data.map((task, index) => {
-        if (task.done == props.status)
+        if (task.done === props.status)
           return (
             <Task
               key={index}
@@ -18,6 +18,7 @@ function TaskViewer(props) {
               status={props.statusChange}
             />
           );
+        else return null;
       })}
     </div>
   );

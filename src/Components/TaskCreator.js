@@ -6,7 +6,9 @@ export class TaskCreator extends Component {
     const year = today.getFullYear();
     const month = today.getMonth() + 1;
     const day = today.getDate();
-    const date = `${year}-${month < 10 ? "0" + month : month}-${day}`;
+    const date = `${year}-${month < 10 ? "0" + month : month}-${
+      day < 10 ? "0" + day : day
+    }`;
     return date;
   };
   state = {
@@ -14,7 +16,7 @@ export class TaskCreator extends Component {
     date: this.getMinDay(),
     priority: false,
     done: false,
-    dateDone: ""
+    dateDone: "",
   };
   today = new Date();
   clearData = () => {
@@ -22,23 +24,23 @@ export class TaskCreator extends Component {
       name: "",
       date: this.getMinDay(),
       priority: false,
-      done: false
+      done: false,
     });
     console.log(this.state);
   };
-  handleDateChange = e => {
+  handleDateChange = (e) => {
     this.setState({
-      date: e.target.value
+      date: e.target.value,
     });
   };
-  handleNameChange = e => {
+  handleNameChange = (e) => {
     this.setState({
-      name: e.target.value
+      name: e.target.value,
     });
   };
-  handlePriorityChange = e => {
-    this.setState(prev => ({
-      priority: !prev.priority
+  handlePriorityChange = (e) => {
+    this.setState((prev) => ({
+      priority: !prev.priority,
     }));
   };
 

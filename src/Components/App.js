@@ -1,5 +1,5 @@
 import "../Styles/App.css";
-import React, { useState, Component } from "react";
+import React, { Component } from "react";
 import TaskCreator from "./TaskCreator";
 import TaskViewer from "./TaskViewer";
 import "bootstrap/dist/css/bootstrap.min.css";
